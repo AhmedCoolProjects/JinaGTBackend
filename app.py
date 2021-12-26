@@ -1,7 +1,10 @@
+from typing import Coroutine
 from flask import Flask, request
 from functions import coloration2
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
